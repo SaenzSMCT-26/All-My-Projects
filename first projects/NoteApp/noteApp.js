@@ -18,23 +18,32 @@ plus.addEventListener("click", () => {
   let span = document.createElement(`span`);
   span.contentEditable = true;
   contentOfCard.appendChild(span);
+// 
+// 
+// 
+// 
+  let delAndSaveContainer = document.createElement(`div`);
+  delAndSaveContainer.classList.add(`delAndSaveContainer`);
 
-  let closeBtnContainer = document.createElement(`div`);
-  closeBtnContainer.classList.add(`closeBtnContainer`);
+  let delContainer = document.createElement('div');
+  delContainer.classList.add(`delContainer`);
 
-  let closeBtn = document.createElement(`button`);
-  closeBtn.classList.add(`delContBtn`);
-  closeBtn.textContent = `✖`;
-  closeBtn.addEventListener('click', () => {
+  let delBtn = document.createElement(`button`);
+  delBtn.classList.add(`delBtn`);
+  delBtn.textContent = `Delete`;
+  delBtn.addEventListener('click', () => {
     noteCard.remove();  
-     
-  })
-  closeBtnContainer.appendChild(closeBtn);
+  });
+  // 
+  // 
+  // 
+  delContainer.appendChild(delBtn);
+  delAndSaveContainer.appendChild(delContainer);
 
   noteCard.appendChild(noteTitle);
   noteCard.appendChild(hRule);
   noteCard.appendChild(contentOfCard);
-  noteCard.appendChild(closeBtnContainer);
+  noteCard.appendChild(delAndSaveContainer);
 
   main.appendChild(noteCard);
 });

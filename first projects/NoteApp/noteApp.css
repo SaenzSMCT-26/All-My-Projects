@@ -135,59 +135,41 @@ hr {
   outline: none;
   color: #428d90;
 }
-.closeBtnContainer {
+.delAndSaveContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  transform: translate(50%, 10%);
+  width: 30%;
+  transform: translate(10%, 10%);
   justify-self: end;
 }
-.delContBtn {
+.delContainer{
+  display: flex;
+  justify-content: center;
+  width: 60px;
+}
+.delBtn {
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
   font-weight: bolder;
   overflow: hidden;
-  width: 20px;
   border: none;
   border-radius: 3px 3px 3px 3px;
-  color: rgba(0, 0, 0, 0);
-  background-color: #686868;
-
-  transition: 0.1s ease-in-out;
+  color: white;
+  background-color: slategray;
+  box-shadow: -1px 3px 5px rgba(0, 0, 0, .5), inset 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.delContBtn:hover {
-  background-color: #ffffff;
+.delBtn:hover {
+  background-color: white;
   overflow: hidden;
-  color: #428d90;
-  animation: delHover 0.25s ease-in-out forwards;
+  color: red;
 }
-.delContBtn:active{
+.delBtn:active{
+  box-shadow: none;
   background-color: #428d90;
   color: white;
-}
-.delContBtn:not(:hover) {
-  animation: delHoverReverse 0.25s ease-in-out forwards;
-}
-
-@keyframes delHover {
-  0% {
-    height: 10px;
-  }
-  100% {
-    height: 20px;
-  }
-}
-
-@keyframes delHoverReverse {
-  0% {
-    height: 20px;
-  }
-  100% {
-    height: 10px;
-  }
 }
